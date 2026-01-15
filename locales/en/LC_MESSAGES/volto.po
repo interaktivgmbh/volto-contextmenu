@@ -10,3 +10,28 @@ msgstr ""
 "Content-Type: \n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. Default: "Back"
+#: components/theme/Contextmenu/index
+msgid "contextMenuBack"
+msgstr ""
+
+#. Default: "Close context menu"
+#: components/theme/Contextmenu/index
+msgid "contextMenuClose"
+msgstr ""
+
+#. Default: "Open context menu"
+#: components/theme/Contextmenu/index
+msgid "contextMenuOpen"
+msgstr ""
+
+#. Default: "Skip context menu"
+#: components/theme/Contextmenu/index
+msgid "contextMenuSkipLink"
+msgstr ""
+
+#. Default: "Toggle context menu"
+#: components/theme/Contextmenu/index
+msgid "contextMenuToggle"
+msgstr ""
