@@ -1,0 +1,45 @@
+{
+  "name": "@interaktiv.de/volto-contextmenu",
+  "version": "1.0.0",
+  "description": "Interaktiv Volto Contextmenu Addon",
+  "main": "src/index.js",
+  "license": "MIT",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react"
+  ],
+  "author": {
+    "name": "Interaktiv GmbH",
+    "url": "https://interaktiv.de",
+    "email": "kontakt@interaktiv.de"
+  },
+  "contributors": [
+    {
+      "name": "Jan Mevißen",
+      "url": "https://github.com/jmevissen"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release": "release-it",
+    "release-major-alpha": "release-it major --preRelease=alpha",
+    "release-alpha": "release-it --preRelease=alpha",
+    "release-rc": "release-it --preRelease=rc"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@plone/scripts": "*",
+    "@types/express": "^4.17.14",
+    "@types/jwt-decode": "~2.2.1",
+    "@types/react-router-config": "^5.0.6"
+  }
+}
