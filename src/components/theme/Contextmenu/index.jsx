@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
@@ -28,6 +28,14 @@ const messages = defineMessages({
   back: {
     id: 'contextMenuBack',
     defaultMessage: 'Back',
+  },
+  scrollUp: {
+    id: 'contextMenuScrollUp',
+    defaultMessage: 'More items above',
+  },
+  scrollDown: {
+    id: 'contextMenuScrollDown',
+    defaultMessage: 'More items below',
   },
 });
 
@@ -97,6 +105,36 @@ const ContextMenu = ({
     dispatch(getContextMenu(pathname));
   }, [dispatch, pathname]);
 
+  const itemsRef = useRef(null);
+  const [canScrollUp, setCanScrollUp] = useState(false);
+  const [canScrollDown, setCanScrollDown] = useState(false);
+
+  const updateScrollIndicators = useCallback(() => {
+    const el = itemsRef.current;
+    if (!el) return;
+
+    const { scrollTop, scrollHeight, clientHeight } = el;
+    setCanScrollUp(scrollTop > 0);
+    setCanScrollDown(scrollTop + clientHeight < scrollHeight - 1);
+  }, []);
+
+  useEffect(() => {
+    const el = itemsRef.current;
+    if (!el) return;
+
+    updateScrollIndicators();
+
+    el.addEventListener('scroll', updateScrollIndicators);
+
+    const resizeObserver = new ResizeObserver(updateScrollIndicators);
+    resizeObserver.observe(el);
+
+    return () => {
+      el.removeEventListener('scroll', updateScrollIndicators);
+      resizeObserver.disconnect();
+    };
+  }, [updateScrollIndicators, isOpen, items]);
+
   const handleToggle = () => {
     if (!isControlled) {
       setInternalIsOpen(!internalIsOpen);
@@ -156,11 +194,31 @@ const ContextMenu = ({
               {renderHeader?.()}
             </div>
           )}
-          <ul className="context-menu-items" role="list">
-            {items.map((item) => (
-              <ContextMenuItem key={item.uid} item={item} />
-            ))}
-          </ul>
+          <div className="context-menu-items-wrapper">
+            {canScrollUp && (
+              <div
+                className="context-menu-scroll-indicator scroll-up"
+                aria-hidden="true"
+                title={intl.formatMessage(messages.scrollUp)}
+              >
+                <span className="scroll-arrow">&#9650;</span>
+              </div>
+            )}
+            <ul className="context-menu-items" role="list" ref={itemsRef}>
+              {items.map((item) => (
+                <ContextMenuItem key={item.uid} item={item} />
+              ))}
+            </ul>
+            {canScrollDown && (
+              <div
+                className="context-menu-scroll-indicator scroll-down"
+                aria-hidden="true"
+                title={intl.formatMessage(messages.scrollDown)}
+              >
+                <span className="scroll-arrow">&#9660;</span>
+              </div>
+            )}
+          </div>
           {renderFooter && (
             <div className="context-menu-footer">{renderFooter()}</div>
           )}

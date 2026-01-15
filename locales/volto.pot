@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2026-01-15T10:35:15.410Z\n"
+"POT-Creation-Date: 2026-01-15T12:31:45.687Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -26,6 +26,16 @@ msgstr ""
 #. Default: "Open context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuOpen"
+msgstr ""
+
+#. Default: "More items below"
+#: components/theme/Contextmenu/index
+msgid "contextMenuScrollDown"
+msgstr ""
+
+#. Default: "More items above"
+#: components/theme/Contextmenu/index
+msgid "contextMenuScrollUp"
 msgstr ""
 
 #. Default: "Skip context menu"

@@ -26,6 +26,16 @@ msgstr ""
 msgid "contextMenuOpen"
 msgstr ""
 
+#. Default: "More items below"
+#: components/theme/Contextmenu/index
+msgid "contextMenuScrollDown"
+msgstr ""
+
+#. Default: "More items above"
+#: components/theme/Contextmenu/index
+msgid "contextMenuScrollUp"
+msgstr ""
+
 #. Default: "Skip context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuSkipLink"
