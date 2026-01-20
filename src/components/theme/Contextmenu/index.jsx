@@ -155,7 +155,7 @@ const ContextMenu = ({
         onClick={handleToggle}
         aria-expanded={isOpen}
         aria-label={intl.formatMessage(isOpen ? messages.close : messages.open)}
-        title={intl.formatMessage(messages.toggle)}
+        title={intl.formatMessage(isOpen ? messages.close : messages.open)}
         type="button"
       >
         {isOpen ? '\u2715' : '\u2630'}
