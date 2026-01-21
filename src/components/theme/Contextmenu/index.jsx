@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
-import { getContextMenu } from '@interaktiv.de/volto-contextmenu/actions';
+import { getContextMenu } from '@interaktivgmbh/volto-contextmenu/actions';
 import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation, useHistory } from 'react-router-dom';

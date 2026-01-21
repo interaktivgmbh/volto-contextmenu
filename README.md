@@ -8,15 +8,15 @@ This addon need [`interaktiv.voltocontextmenu`](https://github.com/interaktivgmb
 
 ## Installation
 
-Add `@interaktiv.de/volto-contextmenu` to your package.json:
+Add `@interaktivgmbh/volto-contextmenu` to your package.json:
 
 ```json
 "addons": [
-  "@interaktiv.de/volto-contextmenu"
+  "@interaktivgmbh/volto-contextmenu"
 ]
 
 "dependencies": {
-  "@interaktiv.de/volto-contextmenu": "*"
+  "@interaktivgmbh/volto-contextmenu": "*"
 }
 ```
 
