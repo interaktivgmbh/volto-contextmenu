@@ -1,5 +1,5 @@
 {
-  "name": "@interaktiv.de/volto-contextmenu",
+  "name": "@interaktivgmbh/volto-contextmenu",
   "version": "1.0.0",
   "description": "Interaktiv Volto Contextmenu Addon",
   "main": "src/index.js",
