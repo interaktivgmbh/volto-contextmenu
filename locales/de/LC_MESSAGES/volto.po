@@ -19,12 +19,12 @@ msgstr "Zurück"
 #. Default: "Close context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuClose"
-msgstr "Kontextmenu schließen."
+msgstr "Kontextnavigation schließen"
 
 #. Default: "Open context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuOpen"
-msgstr "Kontextmenu öffnen."
+msgstr "Kontextnavigation öffnen"
 
 #. Default: "More items below"
 #: components/theme/Contextmenu/index
@@ -39,9 +39,9 @@ msgstr "Weitere Menüinhalte oben"
 #. Default: "Skip context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuSkipLink"
-msgstr "Kontextmenu überspringen."
+msgstr "Kontextnavigation überspringen"
 
 #. Default: "Toggle context menu"
 #: components/theme/Contextmenu/index
 msgid "contextMenuToggle"
-msgstr "Kontextmenü wechseln."
+msgstr "Kontextnavigation wechseln"
