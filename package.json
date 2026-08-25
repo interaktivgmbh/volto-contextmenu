@@ -1,6 +1,6 @@
 {
   "name": "@interaktivgmbh/volto-contextmenu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Interaktiv Volto Contextmenu Addon",
   "main": "src/index.js",
   "license": "MIT",

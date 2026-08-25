@@ -14,6 +14,7 @@ export default function contextMenu(state = initialState, action = {}) {
         error: null,
         loaded: false,
         loading: true,
+        pathname: action.pathname,
         items: null,
       };
     case `${GET_CONTEXTMENU}_SUCCESS`:
@@ -22,6 +23,7 @@ export default function contextMenu(state = initialState, action = {}) {
         error: null,
         loaded: true,
         loading: false,
+        pathname: action.pathname,
         ...action.result,
       };
     case `${GET_CONTEXTMENU}_FAIL`:
@@ -30,6 +32,7 @@ export default function contextMenu(state = initialState, action = {}) {
         error: 'failed',
         loaded: false,
         loading: false,
+        pathname: action.pathname,
       };
 
     default:

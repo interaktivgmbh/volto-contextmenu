@@ -99,11 +99,18 @@ const ContextMenu = ({
   const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
 
   const pathname = flattenToAppURL(getBaseUrl(location.pathname));
-  const { items, loaded, loading } = useSelector((state) => state?.contextMenu) || {};
+  const {
+    items,
+    loaded,
+    loading,
+    pathname: loadedPathname,
+  } = useSelector((state) => state?.contextMenu) || {};
 
   useEffect(() => {
-    dispatch(getContextMenu(pathname));
-  }, [dispatch, pathname]);
+    if (loadedPathname !== pathname) {
+      dispatch(getContextMenu(pathname));
+    }
+  }, [dispatch, loadedPathname, pathname]);
 
   const itemsRef = useRef(null);
   const [canScrollUp, setCanScrollUp] = useState(false);

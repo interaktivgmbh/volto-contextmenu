@@ -7,3 +7,14 @@
 -->
 
 <!-- towncrier release notes start -->
+
+## 1.0.1 (2026-08-25)
+
+### Bugfix
+
+- Avoid duplicate context-menu API requests when the component remounts on the same path. @arybakov 
+- Change german translation of context menu. @arybakov
+
+## 1.0.0 (2026-02-18)
+
+- Initial release.
